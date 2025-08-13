@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className="from-blue-50 shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-blue-600">HealthCheckAI</h1>
+        <h1 className="text-2xl font-bold text-blue-600">Medi-BuddyAi</h1>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-lg items-center">

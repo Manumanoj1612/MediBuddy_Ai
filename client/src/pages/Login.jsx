@@ -25,7 +25,7 @@ export default function Login() {
       localStorage.setItem("user", JSON.stringify(res.data.user));
 
       // Call AuthContext login
-      login();
+      login(res.data.user, res.data.token);
 
       // Doctor account but pending verification
       if (res.data.user.isDoctor && res.data.user.doctorVerified === false) {
@@ -51,7 +51,7 @@ export default function Login() {
             alt="Health Logo"
             className="w-16 h-16 mx-auto"
           />
-          <h1 className="text-2xl font-bold text-teal-700">HealthCheckAI</h1>
+          <h1 className="text-2xl font-bold text-teal-700">Medi-BuddyAi</h1>
           <p className="text-gray-500 text-sm">Your trusted health companion</p>
         </div>
 

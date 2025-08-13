@@ -9,7 +9,7 @@
 //   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 //   const systemPrompt = `
-// You are HealthCheckAI, an expert in reliable health information.  
+// You are Medi-BuddyAi, an expert in reliable health information.  
 // Your tasks:
 // 1. Answer the user's question using accurate, evidence-based health knowledge.
 // 2. Provide 2–3 relevant trustworthy website links (WHO, CDC, Mayo Clinic, NHS, etc.).

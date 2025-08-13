@@ -49,7 +49,7 @@ export default function Signup() {
       <div className="bg-white shadow-lg rounded-lg w-full max-w-md p-8">
         <h2 className="text-3xl font-bold text-center text-blue-600">Sign Up</h2>
         <p className="text-center text-gray-500 mt-2">
-          Join HealthCheckAI and fight health misinformation
+          Join Medi-BuddyAi and fight health misinformation
         </p>
 
         {/* Toggle Buttons */}

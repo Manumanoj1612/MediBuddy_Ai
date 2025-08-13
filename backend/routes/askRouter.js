@@ -3,10 +3,17 @@ const express = require("express");
 const router = express.Router();
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const Chat = require("../models/Chat");
+const authMiddleware = require("../middleware/authmiddleware");
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-router.post("/", async (req, res) => {
+router.post("/", authMiddleware, async (req, res) => {
+  // Check if Gemini API key is available
+  if (!process.env.GEMINI_API_KEY) {
+    console.error("GEMINI_API_KEY not found in environment variables");
+    return res.status(500).json({ error: "Gemini API key not configured" });
+  }
+
   const { question } = req.body;
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
@@ -51,6 +58,7 @@ Return ONLY JSON, no extra text.
 
       // Save chat to DB
       const chat = new Chat({
+        userId: req.userId, // Add userId from authenticated user
         userMessage: question,
         aiMessage: parsed.answer,
         classification: parsed.classification || "Not classified",

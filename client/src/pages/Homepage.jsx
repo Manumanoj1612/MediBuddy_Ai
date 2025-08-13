@@ -16,7 +16,7 @@ export default function HomePage() {
             Your AI Partner for <span className="text-blue-600">Trusted Health Information</span>
           </h2>
           <p className="text-gray-600 mb-6">
-            HealthCheckAI scans articles and social media posts, detecting misleading or harmful
+            Medi-BuddyAi scans articles and social media posts, detecting misleading or harmful
             health information, and provides verified alternatives from trusted sources like WHO and CDC.
           </p>
           <div className="space-x-4">
@@ -74,7 +74,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="bg-white py-6 text-center text-gray-600 text-sm border-t">
-        © {new Date().getFullYear()} HealthCheckAI. All rights reserved.
+        © {new Date().getFullYear()} Medi-BuddyAi. All rights reserved.
       </footer>
     </div>
   );

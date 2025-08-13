@@ -8,10 +8,10 @@ export default function About() {
         {/* Left Content */}
         <div>
           <h2 className="text-4xl font-bold mb-6 text-blue-600">
-            About HealthCheckAI
+            About Medi-BuddyAi
           </h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            <strong>HealthCheckAI</strong> is an AI-powered platform designed to
+            <strong>Medi-BuddyAi</strong> is an AI-powered platform designed to
             help you detect, analyze, and flag misleading or harmful health
             information across the web. In an age where misinformation spreads
             faster than facts, we provide an intelligent solution to ensure you
