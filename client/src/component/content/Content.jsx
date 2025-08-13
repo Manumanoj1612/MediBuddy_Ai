@@ -59,6 +59,15 @@ export default function Content() {
     }
   };
 
+  const handleSummarize = async () => {
+    try {
+      const res = await axios.post("http://localhost:5000/api/chats/summary", { limit: 20 });
+      console.log("Chat Summary:", res.data?.summary || res.data);
+    } catch (err) {
+      console.error("Error summarizing chats:", err);
+    }
+  };
+
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
@@ -133,6 +142,12 @@ export default function Content() {
             className="flex-1 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400"
             onKeyDown={(e) => e.key === "Enter" && handleSend()}
           />
+          <button
+            onClick={handleSummarize}
+            className="bg-gray-200 hover:bg-gray-300 text-gray-800 py-2 px-4 rounded-lg font-semibold"
+          >
+            Summarize
+          </button>
           <button
             onClick={handleSend}
             className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg font-semibold"

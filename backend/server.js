@@ -17,7 +17,8 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use("/api", geminiRoute);
+// Mount legacy gemini routes under a non-conflicting prefix
+app.use("/api/gemini", geminiRoute);
 app.use("/api/auth", profileRoute);
 app.use("/api/ask", askRouter);
 app.use("/api/chats", chatsRouter);
